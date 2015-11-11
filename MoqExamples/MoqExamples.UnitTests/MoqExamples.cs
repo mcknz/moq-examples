@@ -23,10 +23,10 @@ namespace MoqExamples.UnitTests
         [Test]
         public void TestLongRunningLibrary()
         {
-            const int interval = 10;
+            const int interval = 20;
             string returnMessage = String.Format("Waited for {0} seconds", interval);
 
-            _longRunningLibrary.Setup(l => l.RunForALongTime(interval)).Returns(returnMessage);
+            _longRunningLibrary.Setup(l => l.RunForALongTime(It.IsAny<int>())).Returns(returnMessage);
 
             var result = _longRunningLibrary.Object.RunForALongTime(interval);
             Console.WriteLine("Return from method was '{0}'", result);
