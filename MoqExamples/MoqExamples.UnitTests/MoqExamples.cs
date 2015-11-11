@@ -14,23 +14,28 @@ namespace MoqExamples.UnitTests
     {
         private Mock<ILongRunningLibrary> _longRunningLibrary;
 
+
         [SetUp]
         public void SetupForTest()
         {
            _longRunningLibrary = new Mock<ILongRunningLibrary>();
+           _longRunningLibrary
+                .Setup(l =>
+                    l.RunForALongTime(It.IsAny<int>()))
+                .Returns((int s) => 
+                    string.Format("This method has been mocked! The input value is {0}", s));
+           _longRunningLibrary
+                .Setup(l =>
+                    l.RunForALongTime(0))
+                .Throws(new ArgumentException("0 is not a valid interval"));
         }
 
         [Test]
         public void TestLongRunningLibrary()
         {
-            const int interval = 20;
-            string returnMessage = String.Format("Waited for {0} seconds", interval);
-
-            _longRunningLibrary.Setup(l => l.RunForALongTime(It.IsAny<int>())).Returns(returnMessage);
-
-            var result = _longRunningLibrary.Object.RunForALongTime(interval);
+            var result = _longRunningLibrary.Object.RunForALongTime(0);
             Console.WriteLine("Return from method was '{0}'", result);
-            Assert.AreEqual(result, returnMessage);
+            Assert.AreEqual(result, "This method has been mocked! The input value is 0");
         }
     }
 }
