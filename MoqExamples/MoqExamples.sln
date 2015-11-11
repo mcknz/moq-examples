@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoqExamples.UnitTests", "Mo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoqExamples.Library", "MoqExamples.Library\MoqExamples.Library.csproj", "{A2C7BFB4-4DE6-4F29-AC5D-3BD403E8BBEF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoqExamples.Ninject", "MoqExamples.Ninject\MoqExamples.Ninject.csproj", "{8AFB1019-4535-4227-8EF0-F3EE9E7C65F1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A2C7BFB4-4DE6-4F29-AC5D-3BD403E8BBEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2C7BFB4-4DE6-4F29-AC5D-3BD403E8BBEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2C7BFB4-4DE6-4F29-AC5D-3BD403E8BBEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AFB1019-4535-4227-8EF0-F3EE9E7C65F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AFB1019-4535-4227-8EF0-F3EE9E7C65F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AFB1019-4535-4227-8EF0-F3EE9E7C65F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AFB1019-4535-4227-8EF0-F3EE9E7C65F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
