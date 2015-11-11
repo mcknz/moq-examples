@@ -24,9 +24,13 @@ namespace MoqExamples.UnitTests
         public void TestLongRunningLibrary()
         {
             const int interval = 10;
+            string returnMessage = String.Format("Waited for {0} seconds", interval);
+
+            _longRunningLibrary.Setup(l => l.RunForALongTime(interval)).Returns(returnMessage);
+
             var result = _longRunningLibrary.Object.RunForALongTime(interval);
             Console.WriteLine("Return from method was '{0}'", result);
-            Assert.AreEqual(result, String.Format("Waited for {0} seconds",interval));
+            Assert.AreEqual(result, returnMessage);
         }
     }
 }
