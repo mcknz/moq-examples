@@ -5,27 +5,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MoqExamples.Library;
+using Moq;
 
 namespace MoqExamples.UnitTests
 {
     [TestFixture]
     public class MoqExamples
     {
-        //_longRunningLibrary
+        private Mock<ILongRunningLibrary> _longRunningLibrary;
 
         [SetUp]
         public void SetupForTest()
         {
-           // _longRunningLibrary = new LongRunningLibrary();
+           _longRunningLibrary = new Mock<ILongRunningLibrary>();
         }
 
         [Test]
         public void TestLongRunningLibrary()
         {
             const int interval = 10;
-            ILongRunningLibrary longRunningLibrary = new LongRunningLibrary();
-            var result = longRunningLibrary.RunForALongTime(interval);
+            var result = _longRunningLibrary.Object.RunForALongTime(interval);
             Console.WriteLine("Return from method was '{0}'", result);
+            Assert.AreEqual(result, String.Format("Waited for {0} seconds",interval));
         }
     }
 }
