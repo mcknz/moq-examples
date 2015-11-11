@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 
 namespace MoqExamples.Library
 {
@@ -9,7 +10,9 @@ namespace MoqExamples.Library
     {
         public string RunForALongTime(int interval)
         {
-            throw new NotImplementedException();
+            var timeToWait = interval * 1000;
+            Thread.Sleep(timeToWait);
+            return string.Format("Waited {0} seconds", interval);
         }
     }
 }

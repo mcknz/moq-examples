@@ -1,7 +1,6 @@
 ﻿using NUnit.Framework;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,7 +25,7 @@ namespace MoqExamples.UnitTests
             const int interval = 10;
             ILongRunningLibrary longRunningLibrary = new LongRunningLibrary();
             var result = longRunningLibrary.RunForALongTime(interval);
-            Debug.WriteLine("Return from method was {0}", result);
+            Console.WriteLine("Return from method was '{0}'", result);
         }
     }
 }
