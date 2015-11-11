@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoqExamples.UnitTests", "MoqExamples.UnitTests\MoqExamples.UnitTests.csproj", "{95477E41-3083-4FA7-B530-0B1505E14B69}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoqExamples.Library", "MoqExamples.Library\MoqExamples.Library.csproj", "{A2C7BFB4-4DE6-4F29-AC5D-3BD403E8BBEF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{95477E41-3083-4FA7-B530-0B1505E14B69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95477E41-3083-4FA7-B530-0B1505E14B69}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95477E41-3083-4FA7-B530-0B1505E14B69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2C7BFB4-4DE6-4F29-AC5D-3BD403E8BBEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2C7BFB4-4DE6-4F29-AC5D-3BD403E8BBEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2C7BFB4-4DE6-4F29-AC5D-3BD403E8BBEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2C7BFB4-4DE6-4F29-AC5D-3BD403E8BBEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
