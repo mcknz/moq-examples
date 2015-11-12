@@ -11,7 +11,10 @@ namespace MoqExamples.Ninject
     {
         public override void Load()
         {
-            throw new NotImplementedException();
+            Bind<ILoggingDataSink>().To<LoggingDataSink>();
+            Bind<ILoggingComponent>().To<LoggingComponent>();
+            Bind<IDataAccessComponent>().ToProvider(new DataAccessComponentProvider());
+            Bind<IWebServiceProxy>().ToProvider(new WebServiceProxyProvider());
         }
     }
 }

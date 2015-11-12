@@ -46,6 +46,8 @@
     <Compile Include="BusinessService.cs" />
     <Compile Include="CoreModule.cs" />
     <Compile Include="DataAccessComponent.cs" />
+    <Compile Include="WebServiceProxyProvider.cs" />
+    <Compile Include="DataAccessComponentProvider.cs" />
     <Compile Include="IDataAccessComponent.cs" />
     <Compile Include="ILoggingComponent.cs" />
     <Compile Include="ILoggingDataSink.cs" />
