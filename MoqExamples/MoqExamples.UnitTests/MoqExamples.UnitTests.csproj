@@ -34,6 +34,10 @@
       <HintPath>..\packages\Moq.4.2.1510.2205\lib\net40\Moq.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\Program Files (x86)\NUnit 2.6.4\bin\nunit.framework.dll</HintPath>
@@ -48,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MoqExamples.cs" />
+    <Compile Include="NinjectTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -57,6 +62,10 @@
     <ProjectReference Include="..\MoqExamples.Library\MoqExamples.Library.csproj">
       <Project>{A2C7BFB4-4DE6-4F29-AC5D-3BD403E8BBEF}</Project>
       <Name>MoqExamples.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MoqExamples.Ninject\MoqExamples.Ninject.csproj">
+      <Project>{8afb1019-4535-4227-8ef0-f3ee9e7c65f1}</Project>
+      <Name>MoqExamples.Ninject</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
