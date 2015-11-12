@@ -40,8 +40,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessService.cs" />
+    <Compile Include="DataAccessComponent.cs" />
     <Compile Include="IDataAccessComponent.cs" />
+    <Compile Include="ILoggingComponent.cs" />
+    <Compile Include="ILoggingDataSink.cs" />
+    <Compile Include="IWebServiceProxy.cs" />
+    <Compile Include="LoggingComponent.cs" />
+    <Compile Include="LoggingDataSink.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebServiceProxy.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

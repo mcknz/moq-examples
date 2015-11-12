@@ -8,11 +8,20 @@ namespace MoqExamples.Ninject
 {
     public class BusinessService
     {
-        private IDataAccessComponent _dataAccessComponent;
+        private readonly string _databaseConnectionString = "dbString";
+        private readonly string _webServiceAddress = "webAddress";
+        private readonly ILoggingDataSink _loggingDataSink;
 
-        public BusinessService(IDataAccessComponent dataAccessComponent)
+        private IDataAccessComponent _dataAccessComponent;
+        private IWebServiceProxy _webServiceProxy;
+        private ILoggingComponent _loggingComponent;
+
+        public BusinessService()
         {
-            _dataAccessComponent = dataAccessComponent;
+            _loggingDataSink = new LoggingDataSink();
+            _loggingComponent = new LoggingComponent(_loggingDataSink);
+            _webServiceProxy = new WebServiceProxy(_webServiceAddress);
+            _dataAccessComponent = new DataAccessComponent(_databaseConnectionString);
         }
 
     }
